@@ -3,16 +3,45 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>US Air Travel Visualization (2018)</title>
+    <title>U.S. Air Travel Visualization (2018)</title>
     <link rel="stylesheet" type="text/css" href="./index.css">
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
   </head>
   <body>
-    <div id="map" class="svg-container-center">
-	<svg id="map-svg"></svg>
-        <script src="map.js"></script>
+    <div id="help-display" class="show">
+      <div id="help-display-text-container">
+	<div id="help-display-text">
+	  <h3>U.S. Air Travel Visualization (2018)</h3>
+	  <p>The data used came from the <a target="_blank" href="https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=258">U.S. Bureau of Transportation Statistics</a> and the <a target="_blank" href="https://www.partow.net/miscellaneous/airportdatabase/">Global Airport Database</a>.</p>
+	  <p>The visualization is implemented in <a target="_blank" href="https://d3js.org/">D3.js</a>.</p>
+	  <p>Data preprocessing was done via <a target="_blank" href="https://pandas.pydata.org/">Pandas</a>.</p>
+	  <p>The source code can be found <a target="_blank" href="https://github.com/paul-tqh-nguyen/us_air_travel_visualization">here</a>.</p>
+	  <p>For more of my work, see my <a target="_blank" href="https://github.com/paul-tqh-nguyen/">GitHub profile</a> or my <a target="_blank" href="https://paul-tqh-nguyen.github.io/about/">website</a>.</p>
+	  <h3>Notes about the visualization:</h3>
+	  <p>Each dot represents a city market, i.e. the region a set of airports serves. Each dot can represent many airports.</p>
+	  <p>This visualization is intended to show how well-connected regions are via the number of mutual passengers going between regions.</p>
+	  <p>The edges between two city markets represents the number of passengers shared between the two city markets, i.e. the minimum of the number of passengers going one way and the number of passengers going the other way.</p>
+	  <p>Hover over a city market to temporarily reveal the relevant flight paths.</p>
+	  <p>Click on a city market to make the flight paths stay.</p>
+	  <p>Hover over or click the flight paths to show flight information.</p>
+	  <h3 id="close-help-button" onclick="toggleHelp()"><a>Go to Map</a></h3>
+	</div>
+      </div>
     </div>
+    <table id="display-table" style="table-layout: fixed; width: 100%">
+      <tr>
+	<td style="width:2%;">
+	  <div id="open-help-button" onclick="toggleHelp()"><a>Help</a></div>
+	</td>
+	<td style="width:98%;">
+	  <div id="map" class="svg-container-center">
+	    <svg id="map-svg"></svg>
+            <script src="map.js"></script>
+	  </div>
+	</td>
+      </tr>
+    </table>
   </body>
 </html>

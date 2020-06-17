@@ -89,9 +89,10 @@ const mapMain = () => {
                 textLines.forEach((textLine, textLineIndex) => {
                     displayTextGroup
                         .append('text')
+                        .style('font-size', Math.min(20, svg_height * 0.4 / textLines.length))
+                        .attr('class', 'displayed-text')
                         .attr('x', svg_width / 2)
                         .attr('y', displayTextGroupVerticalOffset)
-                        .style('font-size', Math.min(20, svg_height * 0.4 / textLines.length))
                         .attr('dy', `${textLineIndex * 1.2}em`)
                         .html(textLine);
                 });
@@ -250,3 +251,9 @@ const mapMain = () => {
 };
 
 mapMain();
+
+
+const toggleHelp = () => {
+    document.getElementById("help-display").classList.toggle("show");
+    document.getElementById("display-table").classList.toggle("show");
+};

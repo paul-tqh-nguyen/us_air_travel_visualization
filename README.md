@@ -6,9 +6,9 @@ A live demo can be found here [https://paul-tqh-nguyen.github.io/us_air_travel_v
 
 The data used came from the [U.S. Bureau of Transportation Statistics](https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=258) and the [Global Airport Database](https://www.partow.net/miscellaneous/airportdatabase/). 
 
-The visualization is implemented in [D3.js]([https://d3js.org/](https://d3js.org/)).
+The visualization is implemented in [D3.js](https://d3js.org/).
 
-Data preprocessing was done via [Pandas]([https://pandas.pydata.org/](https://pandas.pydata.org/)).
+Data preprocessing was done via [Pandas](https://pandas.pydata.org/).
 
 Notes about the visualization:
 * Each dot represents a city market, i.e.the region that a set of possibly many airports serves. Thus, each dot can represent one or more airports. 
