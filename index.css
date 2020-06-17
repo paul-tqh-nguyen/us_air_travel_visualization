@@ -1,0 +1,76 @@
+
+/***********/
+/* General */
+/***********/
+
+body {
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*******/
+/* SVG */
+/*******/
+
+.svg-container-center {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-family: sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#map {
+    border: 1px solid purple;
+    height: 90vh;
+    width: 90vw;
+}
+
+#map-svg {
+    background-color: #D0D0D4;
+}
+
+.flight-path-of-clicked-city-market {
+    fill: none;
+    stroke: #1fdbff;
+    opacity: 0.5;
+    stroke-width: 1;
+}
+
+.flight-path-clicked, .flight-path-of-clicked-city-market:hover {
+    fill: none;
+    opacity: 1;
+    stroke: #DAA520;
+    stroke-width: 1;
+}
+
+.flight-path-of-hovered-city-market {
+    fill: none;
+    stroke: #ff1fd2;
+    opacity: 0.5;
+    stroke-width: 1;
+}
+
+.landmass {
+    fill: #8C9B80;
+    Stroke: red;
+    stroke-width: 0.25;
+}
+
+.city-market {
+    fill: red;
+    r: 1.1;
+    transition: fill 0.2s, r 0.2s;
+    stroke: #fff;
+    stroke-width: 0.3;
+}
+
+.city-market:hover {
+    fill: darkred;
+    r: 2.5;
+    stroke-width: 0.4;
+}
