@@ -57,6 +57,12 @@ body {
     overflow-x: hidden;
     padding: 0px;
     margin: 0px;
+    background-color: #dadee6;
+    background-image: url(background.png);
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 p {
@@ -89,7 +95,7 @@ a {
     transition: all 0.5s;
     left: -200vw;
     top: 10vh;
-    border: 1px solid purple;
+    border: 1px solid #5c5c5c;
     width: 80vw;
     height: 80vh;
     background-color: #D0D0D4;
@@ -139,7 +145,7 @@ a {
 }
 
 #map {
-    border: 1px solid purple;
+    border: 1px solid #5c5c5c;
     height: 90vh;
     width: 90vw;
 }

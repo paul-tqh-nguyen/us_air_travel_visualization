@@ -11,7 +11,7 @@ The visualization is implemented in [D3.js](https://d3js.org/).
 Data preprocessing was done via [Pandas](https://pandas.pydata.org/).
 
 Notes about the visualization:
-* Each dot represents a city market, i.e.the region that a set of possibly many airports serves. Thus, each dot can represent one or more airports. 
+* Each dot represents a city market, i.e. the region that a set of possibly many airports serves. Thus, each dot can represent one or more airports. 
 * The edges between two city markets represents the number of passengers shared between the two city markets, i.e. the minimum of the number of passengers going one way and the number of passengers going the other way. 
 * Hover over a city market to temporarily reveal the relevant flight paths.
 * Click on a city market to make the flight paths stay.
